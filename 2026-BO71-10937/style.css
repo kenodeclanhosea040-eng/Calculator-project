@@ -1,0 +1,107 @@
+/* Reset & Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 16px;
+}
+
+/* Calculator Container */
+.container {
+  width: 100%;
+  max-width: 360px;
+  background-color: #000000;
+  border-radius: 32px;
+  padding: 56px 20px 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Screen Display */
+.display {
+  background-color: #333333;
+  border-radius: 8px;
+  height: 80px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.display-value {
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+/* Keypad Grid */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Base Button Style */
+.black {
+  border: none;
+  outline: none;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  font-size: 1.45rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.15s ease, transform 0.08s ease;
+  user-select: none;
+}
+
+/* Button Hover & Click Feedback */
+.black:hover {
+  filter: brightness(1.15);
+}
+
+.black:active {
+  transform: scale(0.93);
+  filter: brightness(0.9);
+}
+
+/* Button Variants */
+.operator {
+  background-color: #a5a5a5;
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.orange {
+  background-color: #ff9f0a;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+/* Wide "0" Button */
+.zero {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  height: 100%;
+  border-radius: 35px;
+  justify-content: flex-start;
+  padding-left: 28px;
+}
